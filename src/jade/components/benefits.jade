@@ -1,0 +1,9 @@
+include ../mixins/unsigned_list.jade
+.benefits.clear
+   h2.title Our Benefits
+   - var text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean turpis diam, feugiat a luctus in, rhoncus eget risus.'
+   - var content = {contentType: 'list-vertical', elements: [text, text, text]}
+   .benefits-container.left
+      +unsigned_list(content)
+   .benefits-container.right
+      +unsigned_list(content)

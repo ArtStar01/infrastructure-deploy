@@ -1,0 +1,43 @@
+include ../mixins/unsigned_list
+footer.footer
+    .footer-content.content-indent
+        .footer-navigation.inline-block
+            - var content = {title:'BrowseSite', titleClass: 'title', contentType: 'list-vertical', elements: ['About our company','Contact us','Our Portfolio','Our Prices','Online quote form','Client Testimonials']}
+            +unsigned_list(content)
+        .testimonials.inline-block
+            h4.title Our Testimonials
+            a(href='#').feedback
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean turpis diam, feugiat a luctus in, rhoncus eget risus. Maecenas consequat porttitor dui, vitae consequat massa imperdiet ut. elit ut tempus lobortis, eros leo molestie velit.
+                strong.author Rafi, GraphicsFuel.com
+        .blog.inline-block
+            .blog-posts
+                h4.title From Our Blog
+                a(href='#').post
+                    p.date   July 6, 2010
+                    p.title
+                        strong Lorem ipsum dolor sit amet, consectetur
+                    p.content
+                        | adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean turpis diam
+                a(href='#').post
+                    p.date   July 6, 2010
+                    p.title
+                        strong Lorem ipsum dolor sit amet, consectetur
+                    p.content
+                        | adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean turpis diam
+    .copyright.content-indent
+        p.copy.inline-block  Copyright © 2010 Business. All rights reserved. Designed by GraphicFuel.com
+        .media.inline-block
+            .icons-block
+                ul.list-horizontal
+                    li
+                        a(href='#')
+                            img(alt='media-icon', src='img/icons/twitter.png')
+                    li
+                        a(href='#')
+                            img(alt='media-icon', src='img/icons/in.png')
+                    li
+                        a(href='#')
+                            img(alt='media-icon', src='img/icons/facebook.png')
+                .footer-logo
+                    p.image-holder
+                        img(alt='logo', src='img/layout/footer-logo.png')

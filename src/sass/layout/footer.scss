@@ -1,0 +1,160 @@
+.footer {
+  width: 100%;
+  min-height: $footer_height;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #ededed;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  display: block;
+  font-size: 12px;
+  .footer-content {
+    padding-bottom: 15px;
+    a {
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #cccccc;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #bababa;
+  }
+  .inline-block {
+    vertical-align: top;
+    color: #4f4f4f;
+    a {
+      color: #4f4f4f;
+      text-decoration: none;
+    }
+  }
+  h4.title {
+    font-weight: bold;
+    color: #585858;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+}
+.footer-navigation {
+  width: 25%;
+  li {
+    margin-top: 10px;
+  }
+  a {
+    color: #4f4f4f;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.testimonials {
+  width: 42%;
+  padding: 0 5% 0 3%;
+  strong.author {
+    font-weight: bold;
+    color: #000;
+  }
+  p {
+    line-height: 1.8;
+  }
+}
+.blog {
+  width: 29%;
+  .blog-posts {
+    .post {
+      display: block;
+      margin-top: 20px;
+      text-decoration: none;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h5.title {
+      color: #0f4db6;
+    }
+    p.title {
+      font-weight: bold;
+      color: #0f4db6;
+    }
+    p.content {
+      &:after {
+        content: '...';
+      }
+    }
+  }
+}
+.copyright {
+  min-height: 60px;
+  border-top: 1px solid #fff;
+  position: relative;
+  padding-top: 27px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #cccccc;
+  }
+  p.copy {
+
+  }
+  .footer-logo {
+    display: inline-block;
+    opacity: 0.3;
+  }
+}
+.media {
+  width: 50%;
+  .icons-block {
+    display: block;
+    text-align: right;
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+    width: 50%;
+    ul {
+      display: inline-block;
+      padding-right: 90px;
+      li {
+        margin-left: 12px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .copyright {
+    height: 100px;
+    text-align: center;
+  }
+  .media .icons-block {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 63%;
+  }
+  .wrapper {
+    padding-bottom: 445px;
+  }
+}

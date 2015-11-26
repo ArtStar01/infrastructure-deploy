@@ -1,0 +1,24 @@
+extends layout/layout.jade
+include mixins/sidebar.jade
+include mixins/proposal.jade
+block title
+    title Services
+block pageData
+    - var data = {selected: 'Services', pageSlogan: 'We are best in what we do. Check out our services.'};
+block content
+    main.content.services-page.clear
+        - var arr = [], descr = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula. Aenean turpis diam, feugiat a luctus in, rhoncus eget risus. Maecenas consequat porttitor dui, vitae consequat massa imperdiet ut. elit ut tempus lobortis, eros leo molestie velit, non egestas augue nulla eget erat. tempus lobortis.';
+        - arr[0] = {'topTitle': 'Website Design', 'url': 'img/products/product3.png', 'description': descr}
+        - arr[1] = {'topTitle': 'Logo & Branding', 'url': 'img/products/product1.png', 'description': descr}
+        - arr[2] = {'topTitle': 'Blog Development', 'url': 'img/products/product2.png', 'description': descr}
+        - arr[3] = {'topTitle': 'Print Design', 'url': 'img/products/product2.png', 'description': descr}
+        - arr[4] = {'topTitle': 'SEO', 'explanation': 'Search Engine Optimization',  'url': 'img/products/product1.png', 'description': descr}
+        - arr[5] = {'topTitle': 'Social Media Marketing', 'url': 'img/products/product3.png', 'description': descr}
+
+        - var servicesArr =[{'className': 'services-list', 'items': [ arr[0], arr[1], arr[2] ]}, {'className': 'services-list', 'items': [ arr[3], arr[4], arr[5] ]}];
+        - for(var i=0, len=servicesArr.length;i<len;++i) {
+            .services-block.content-indent
+                +proposal(servicesArr[i])
+        - }
+        .services-block.benefits-parent.content-indent
+            include components/benefits.jade

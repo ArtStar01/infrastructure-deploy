@@ -1,0 +1,44 @@
+.contact-page {
+  aside.sidebar {
+    float: right;
+    ul {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      li {
+        margin-top: 10px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    li {
+      img {
+        margin-left: 8px;
+      }
+      &:first-child {
+        img {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  form.contact-form {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contact-page aside.sidebar {
+    width: 100%;
+    li {
+      a {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}

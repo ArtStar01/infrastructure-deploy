@@ -1,0 +1,36 @@
+@mixin border-radius($radius){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin box-shadow($shadow...){
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+@mixin background-linear-gradient($to, $color-start, $color-end){
+  background: $color-start; /* Old browsers */
+  background: -moz-linear-gradient($to, $color-start, $color-end); /* FF3.6+ */
+  background: -webkit-linear-gradient($to, $color-start, $color-end); /* Chrome10+, Safari5.1+ */
+  background: -o-linear-gradient($to, $color-start, $color-end); /* Opera 11.10+ */
+  background: -ms-linear-gradient($to, $color-start, $color-end); /* IE10+ */
+  filter: "progid:DXImageTransform.Microsoft.gradient( enabled=true, startColorstr='#{$color-start}', endColorstr= '#{$color-end}', GradientType=0 )"; /* IE6-9 */
+}
+@mixin background-linear-gradient_3($to, $color-start, $color-middle, $color-end){
+  background: $color-start; /* Old browsers */
+  background: -moz-linear-gradient($to, $color-start, $color-middle, $color-end); /* FF3.6+ */
+  background: -webkit-linear-gradient($to, $color-start, $color-middle, $color-end); /* Chrome10+, Safari5.1+ */
+  background: -o-linear-gradient($to, $color-start, $color-middle, $color-end); /* Opera 11.10+ */
+  background: -ms-linear-gradient($to, $color-start, $color-middle, $color-end); /* IE10+ */
+  filter: "progid:DXImageTransform.Microsoft.gradient( enabled=true, startColorstr='#{$color-start}', endColorstr= '#{$color-end}', GradientType=0 )"; /* IE6-9 */
+}
+@mixin background-radial-gradient($color-start, $color-end) {
+  background: $color-start; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, $color-start, $color-end); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, $color-start, $color-end); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, $color-start, $color-end); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, $color-start, $color-end); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, $color-start, $color-end); /* IE10+ */
+  background: radial-gradient(ellipse at center, $color-start, $color-end); /* W3C */
+  filter: "progid:DXImageTransform.Microsoft.gradient( enabled=true, startColorstr='#{$color-start}', endColorstr= '#{$color-end}', GradientType=1 )"; /* IE6-9 fallback on horizontal gradient */
+}

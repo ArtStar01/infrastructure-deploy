@@ -1,0 +1,16 @@
+/* Common style */
+@import 'layout/common';
+/* Layout parts */
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/sidebar';
+@import 'components/contact_form';
+@import 'components/paginator';
+@import 'components/benefits';
+/* Pages */
+@import 'pages/contact';
+@import 'pages/about';
+@import 'pages/portfolio';
+@import 'pages/services';
+/* Bootstrap */
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap'

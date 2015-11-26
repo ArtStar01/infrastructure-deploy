@@ -1,0 +1,42 @@
+.benefits {
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #585858;
+  }
+  .benefits-container {
+    width: 45%;
+    margin-right: 40px;
+    padding-left: 45px;
+    &:first-child {
+      margin-right: 0;
+    }
+    li {
+      margin: 35px 0 10px;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        background: url('../img/icons/ok-icon.png');
+        display: inline-block;
+        height: 30px;
+        width: 32px;
+        left: -45px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      a {
+        color: #4f4f4f;
+        font-size: 12px;
+        line-height: 1.5;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:visited {
+          color: #4f4f4f;
+        }
+      }
+    }
+  }
+}

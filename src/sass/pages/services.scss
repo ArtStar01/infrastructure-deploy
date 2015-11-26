@@ -1,0 +1,115 @@
+.services-page {
+  .services-block {
+    padding-bottom: 35px;
+    padding-top: 40px;
+    position: relative;
+    border-bottom: 1px solid #c9c9c9;
+    &:first-child {
+      padding-top: 0;
+      &:before {
+        content: '';
+        display: none;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 100%;
+      @include background-linear-gradient(bottom, #eeeeee, #fff);
+      background: linear-gradient(to bottom, #eeeeee, #fff);
+    }
+  }
+  .benefits-parent {
+    border-bottom: none;
+  }
+  .services-list {
+    li {
+      min-height: 405px;
+      width: 33%;
+      text-align: center;
+      a {
+        color: #4f4f4f;
+        font-size: 12px;
+        margin: 0 auto;
+        display: inline-block;
+        height: auto;
+        max-width: 270px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      h4 {
+        font-size: 25px;
+        color: #575757;
+        margin-bottom: 25px;
+        span.explanation {
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+      p.text-content {
+        line-height: 1.5;
+        font-size: 12px;
+      }
+      h4,
+      p.text-content {
+        margin-top: 25px;
+        text-align: left;
+      }
+    }
+    .buttons {
+      margin-top: 20px;
+      width: 270px;
+      display: inline-block;
+    }
+    .btn {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      color: #6c6c6c;
+      padding: 5px 10px;
+      border: 1px solid #c9c9c9;
+      border-radius: 4px;
+      @include background-linear-gradient(bottom, #fff, #e5e5e5);
+      background: linear-gradient(to bottom, #fff, #e5e5e5);
+      &:hover {
+        font-style: italic;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px){
+  .services-page {
+    .services-list {
+      li {
+        width: 49%;
+      }
+    }
+  }
+  .benefits {
+    .benefits-container {
+      width: 100%;
+      float: none;
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .services-page {
+    .services-list {
+      li {
+        width: 100%;
+        a {
+          max-width: 100%;
+        }
+        h4 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

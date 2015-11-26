@@ -1,0 +1,14 @@
+extends layout/layout.jade
+include mixins/sidebar.jade
+block title
+    title Contact
+block pageData
+    - var data = {selected: 'Contact', pageSlogan: 'Thank you for stopping by. How may we help you!'};
+block content
+    main.content.contact-page.content-indent.clear
+        include components/contact_form.jade
+        - var contactSidebarArr = []
+        - contactSidebarArr[0] = {'title': 'Company info', 'contentType': 'list-vertical', 'content': [{'isRef': true, 'isImg': false, 'item': '1234 Street name'}, {'isRef': true, 'isImg': false, 'item': 'City - 12345'}, {'isRef': true, 'isImg': false, 'item': 'Country'}]}
+        - contactSidebarArr[1] = {'title': 'Contact Details', 'contentType': 'list-vertical', 'content': [{'isRef': true, 'isImg': false, 'item': 'contact@mail.com'}, {'isRef': true, 'isImg': false, 'item': 'Website: www.Business.com'}, {'isRef': false, 'isImg': false, 'item': 'Phone: 123-456-7890'}]}
+        - contactSidebarArr[2] = {'title': 'Connect With Us', 'contentType': 'list-horizontal', 'content': [{'isRef': true, 'isImg': true, 'item': 'img/icons/sidebar-in.png'}, {'isRef': true, 'isImg': true, 'item': 'img/icons/sidebar-twitter.png'}, {'isRef': true, 'isImg': true, 'item': 'img/icons/sidebar-facebook.png'}]}
+        +sidebar(contactSidebarArr)

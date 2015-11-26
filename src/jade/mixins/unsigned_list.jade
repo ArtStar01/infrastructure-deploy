@@ -1,0 +1,10 @@
+mixin unsigned_list(content)
+        - var innerContent = content ? content : [];
+        - var items = innerContent.elements || []
+        if innerContent.title
+            h4(class= innerContent.titleClass || '')=innerContent.title
+        ul(class= innerContent.contentType || '')
+            - for(var i=0,len=items.length;i<len;++i) {
+                li
+                    a(href="#")=items[i]
+            - }

@@ -1,0 +1,26 @@
+mixin putItem(Item)
+    - if(Item.isImg) {
+        img(alt='img', src='#{Item.item}')
+    - }
+    - else {
+        | #{Item.item}
+    - }
+
+//- Gets array of block. Sidebar consist of set blocks (header + content)
+mixin sidebar(outerContent)
+    aside.sidebar
+        - var innerContent = outerContent ? outerContent : [{'title': 'Empty', 'contentType': 'list-vertical', 'content': [{'isRef': false, 'isImg': false, 'item': 'empty11'}, {'isRef': false, 'isImg': false, 'item': 'empty22'}]}];
+        - for(var i=0,len=innerContent.length; i<len; ++i) {
+            h3.title #{innerContent[i].title}
+            ul( class = (innerContent[i].contentType || '') + ' ' + (innerContent[i].className || '') )
+                - for(var j=0,len2=innerContent[i].content.length; j<len2; ++j) {
+                    li
+                        - if(innerContent[i].content[j].isRef) {
+                            a(href='#')
+                                +putItem(innerContent[i].content[j])
+                        - }
+                        - else {
+                            +putItem(innerContent[i].content[j])
+                        - }
+                - }
+        - }

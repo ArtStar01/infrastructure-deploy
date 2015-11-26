@@ -1,0 +1,17 @@
+extends layout/layout.jade
+include mixins/sidebar.jade
+include mixins/proposal.jade
+block title
+   title Portfolio
+block pageData
+   - var data = {selected: 'Portfolio', pageMenu: ['Web Design','Blog Design','Logos','Print Works','Graphics']};
+block content
+   main.content.portfolio-page.content-indent.clear
+      - var arr = [], descr = 'consectetur adipiscing elit. Etiam tristique tristique lacus in varius. Donec nec vestibulum ligula.', title = 'Lorem Ipsum dolor sit amet';
+      - arr[0] = {'bottomTitle': title, 'url': 'img/products/product1.png', 'description': descr}
+      - arr[1] = {'bottomTitle': title, 'url': 'img/products/product2.png', 'description': descr}
+      - arr[2] = {'bottomTitle': title, 'url': 'img/products/product3.png', 'description': descr}
+
+      - var portfolioArr = {'className': 'product-list', 'items': [ arr[0], arr[1], arr[2], arr[0], arr[1], arr[2], arr[0], arr[1], arr[2] ]};
+      +proposal(portfolioArr)
+   include components/paginator.jade

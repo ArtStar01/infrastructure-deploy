@@ -1,0 +1,59 @@
+.portfolio-page {
+  .product-list {
+    li {
+      min-height: 270px;
+      width: 33%;
+      text-align: center;
+      a {
+        margin: 0 auto;
+        display: inline-block;
+        height: auto;
+        max-width: 270px;
+        color: #4f4f4f;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    h4 {
+      margin: 20px 0 10px 0;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    p.text-content {
+      line-height: 1.5;
+      font-size: 12px;
+    }
+    h4,
+    p.text-content {
+      text-align: left;
+    }
+  }
+}
+@media screen and (min-width: 1680px){
+  .portfolio-page {
+    .product-list {
+      li {
+        width: 24.5%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px){
+  .portfolio-page {
+    .product-list {
+      li {
+        width: 49%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .portfolio-page {
+    .product-list {
+      li {
+        width: 100%;
+      }
+    }
+  }
+}

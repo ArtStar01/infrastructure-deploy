@@ -1,0 +1,26 @@
+include ../mixins/unsigned_list
+header.header
+	block pageData
+		- var data = {selected: 'About', pageSlogan: 'We are a dynamic team with innovative ideas for you.'};
+	.top-header
+		.logo
+			p.image-holder
+				img(alt='logo', src='img/layout/logo.png')
+		.telephone.clear
+			p.image-holder.right
+				img(alt='phone', src='img/layout/number.png')
+		nav.menu.content-indent
+			ul.navigation-list.list-horizontal
+				- var menu = ['About', 'Services', 'Portfolio', 'Contact', 'Boot'];
+				- for(var i=0,len=menu.length;i<len;++i) {
+					li
+						a(href=menu[i].toLowerCase() + '.html', class= data.selected === menu[i] ? 'active' : '')= menu[i]
+				- }
+	.bottom-header.content-indent.clear
+		h1.page-name.left= data.selected
+		if(data.pageSlogan)
+			p.page-text.right= data.pageSlogan
+		else
+			div.page-menu.right
+				- var content = {contentType: 'list-horizontal', elements: data.pageMenu}
+				+unsigned_list(content)

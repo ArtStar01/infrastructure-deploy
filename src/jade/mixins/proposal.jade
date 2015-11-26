@@ -1,0 +1,21 @@
+mixin proposal(elements)
+    - var innerContent = elements || [];
+
+    ul(class= 'list-horizontal ' + (innerContent.className || ''))
+        - for(var i=0,len=innerContent.items.length;i<len;++i) {
+            li
+                a(href="#")
+                    if (innerContent.items[i].topTitle)
+                        h4(class= innerContent.items[i].topTitleClass || '')
+                            | #{innerContent.items[i].topTitle}
+                            if (innerContent.items[i].explanation)
+                                span.explanation= ' (' + innerContent.items[i].explanation + ')'
+                    img(src=innerContent.items[i].url)
+                    if (innerContent.items[i].bottomTitle)
+                        h4(class= innerContent.items[i].bottomTitleClass || '')=innerContent.items[i].bottomTitle
+                    p.text-content=innerContent.items[i].description
+                if (innerContent.items[i].topTitle)
+                    p.buttons.clear
+                        button.btn.left PORTFOLIO
+                        button.btn.right HIRE IS NOW
+        - }

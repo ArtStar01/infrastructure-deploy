@@ -1,0 +1,102 @@
+.header {
+  min-height: 191px;
+  .top-header {
+    min-height: 100px;
+    position: relative;
+  }
+  .bottom-header {
+    border-top: 1px solid #1a56c2;
+    min-height: 85px;
+    background: url('../img/layout/header-background.png') repeat-x;
+    color: #fff;
+  }
+}
+.bottom-header {
+  .page-name {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 26px;
+  }
+  .page-text {
+    font-size: 20px;
+    font-style: italic;
+    padding: 28px 4% 0 0;
+  }
+}
+.logo {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+}
+nav.menu {
+  text-align: right;
+}
+.page-menu {
+  padding-top: 34px;
+  li {
+    a {
+      font-size: 13px;
+      color: #93daff;
+    }
+    margin-left: 30px;
+    &:first-child a {
+      margin-left: 0;
+    }
+    &:first-child a,
+    &:hover a {
+      color: #fff;
+    }
+  }
+}
+.navigation-list {
+  display: inline-block;
+  width: 450px;
+  margin: 15px 0 25px;
+  li {
+    margin-left: 3%;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  a {
+    padding: 7px 10px;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #808080;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    &:hover, &.active {
+      text-decoration: none;
+      @include background-linear-gradient_3(top, #266ecf, #003a89, #2d7adf);
+      background: linear-gradient(to bottom, #266ecf, #003a89, #2d7adf);
+      color: #fff;
+      border: 1px solid #0c2c53;
+      @include box-shadow(0px 3px 2px -1px #00224B, 0px -3px 2px -1px #00224B);
+      @include border-radius(5px);
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  nav.menu {
+    padding: 50px 25px 0 0;
+  }
+  .bottom-header{
+    .page-name {
+      padding-top: 10px;
+      text-align: center;
+      width: 90%;
+    }
+    .page-text {
+      padding-top: 8px;
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .page-menu {
+    text-align: center;
+    margin-top: 15px;
+    float: none;
+  }
+}

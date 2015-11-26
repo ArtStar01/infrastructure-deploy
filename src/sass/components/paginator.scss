@@ -1,0 +1,48 @@
+.paginator {
+  position: relative;
+  height: 40px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -21px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #dfdfdf;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    @include background-linear-gradient(bottom, #ededed, #fff);
+    background: linear-gradient(to bottom, #ededed, #fff);
+  }
+  ul {
+    li {
+      margin-left: 10px;
+      a {
+        font-size: 13px;
+        color: #0f4db6;
+        &:visited {
+          color: #0f4db6;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active a {
+        color: #000;
+        cursor: default;
+      }
+      &.hide-others a {
+        &:after {
+          content: '....';
+          display: inline;
+        }
+      }
+    }
+  }
+}
