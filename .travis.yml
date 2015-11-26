@@ -12,6 +12,4 @@ deploy:
   on: heroku
   skip_cleanup: true
   api_key:
-    secure: F2wyhEXfJYBf2XLbDIGFKU1P+ujetzPxNAf1PZBW7PeqIKjHcnvXqPU1CoTNcQkPHYwspxBpfjWVmZajqbS3wzEMWhycMwOdlNLspDsvqeo4EFk60GcdIdQny7B4WCgR59uJCkvUxv+e8Dk4seRT50FQmKum3rskqkR1znrmY4yrPdcjC822v0wgUTOPV2H/JSiORkOszbn9VzCjPPnORQqKPGQBpSCEVe4LuQAtGcG1cAqck6LziDsN+
-            1wNZ/oSHiluaDW6L1i/VEA+EnrdMz7hfmqujUQ56LTR/IDmelllwdu2FJN1O1JHwpJXeTA3uBhz6Vm5ZjM/eLThqhPalynS5TCV+ydHStbQhVOpOfW72supa009EmXV8pz+a1ddUSfGX2+wFjZ37jpT41gJ7TR4QfK1ex+jX3j6ccuGKce4OJ46NMNHJUWAsdl+iVreOyGHOUO+5DGZyKCN4Bju5FuDnRqO0qkLS1nN21AXp8jvDaX64nk8GhI4QBJok
-            UiUQmEQNFbNIbnmzYqVV6UFcDLjaOd7NDherqQuGBV6cgAnHhgc9P8UQ2bHTs3W4n01bpY2/QNI0ZBLmfzGbyy+jZbMsj2rNBUNWVT4CkShco1cQOaCEjtNTJyBnWXnagJWk/hwL8xdbtiApumd5DuUkENgp7nlcj9eI8EsQZhl0R8=
+    secure: d84ba99d-718e-4dd9-b839-1357efdb40cb
