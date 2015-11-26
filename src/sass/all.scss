@@ -1,3 +1,5 @@
+/* Bootstrap */
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
 /* Common style */
 @import 'layout/common';
 /* Layout parts */
@@ -12,5 +14,3 @@
 @import 'pages/about';
 @import 'pages/portfolio';
 @import 'pages/services';
-/* Bootstrap */
-@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap'
